@@ -39,11 +39,11 @@ public class DataRestTest {
 
     @DisplayName("[API] 게시글 -> 댓글 리스트 조회")
     @Test
-    void givenNothing_whenRequestingArticlesCommentsFromArticle_thenReturnsArticleCommentsJsonResponse() throws Exception {
+    void givenNothing_whenRequestingArticleCommentsFromArticle_thenReturnsArticleCommentsJsonResponse() throws Exception {
         //Given
 
         //When
-        mvc.perform(get("/api/articles/1/articleComments"))
+        mvc.perform(get("/api/articles/2/articleComment"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
     }
